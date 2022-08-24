@@ -1,0 +1,25 @@
+ body
+  {
+    color: white;
+    background: pink;
+  }
+  /* identifica el estilo para la clase heading */
+.heading
+  {
+    width: 80%;
+    font-size: 22px;
+  }
+  /* identifica el estilo para el id camera */
+#camera
+  {
+    border: 2px dashed black;
+    width: 350px;
+    height: 300px; 
+  }
+  .name_of_objects, #result_object_name  , #result_object_accuracy
+  {
+    color: yellow;
+  }
+
+/* cuando el diseño es para etiqueta con una clase le ponemos un punto antes de la clase */
+/* cuando el diseño es para etiqueta con un id le ponemos # antes de la clase */

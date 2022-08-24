@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Reconocimiento de imagen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script><!--enlaces de bootstrap-->
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script><!--funcion de java para accesar a la webcam-->
+
+   <link rel="stylesheet" href="style.css"> <!--en lace al archivo de estilo-->
+  
+  </head>
+
+  <body>
+  <div class="container">
+    
+    <center>
+      <!-- pon una etiqueta h3 de la clase btn btn-default heading , agrega el texto Reconocimiento de imagen -->
+      <h3 class = "btn btn-default"> Reconocimiento de imagen</h3>
+      <br> <br>
+      <!-- pon dos saltos de línea -->
+      
+      <!-- pon un parrafo con estilo font-size: 22px; y el texto El modelo está entrenado para identificar los siguientes objetos: -->
+      <p style = "font-size: 22px;"> El modelo está entrenado para identificar los siguientes objetos:</p>
+      <!-- pon una etiqueta b de la clase name_of_objects , con el texto de los objetos que vamos a identificar  -->
+      <b class ="name_of_objects" >
+        abuela 
+        <hr>
+        papa
+        <hr>
+        mama
+        <hr>
+        </b>
+      <!-- pon una etiqueta hr para dibujar una línea entre cada objeto -->
+      <!-- cierra la etiqueta b -->
+      
+      <!-- pon una etiqueta con el texto Vista de la cámara -->
+      <label> vista de la cámara</label>
+      <!-- pon una div con el id camera -->
+      <div id = "camera"> </div>
+      <br><br>
+      <!-- pon una div con el id result -->
+          <div id = "result"> </div>
+      <br><br>
+      <!-- pon un boton con un evento onclick para llamar a la función take_snapshot que sea de la clase btn btn-info y ponle el texto Capturar imagen -->
+      <button onclick =  "take_snapshot();" class ="btn btn-info">Capturar imagen</button>
+      <br><br>
+      <!-- pon un boton con un evento onclick para llamar a la función take_snapshot que sea de la clase btn btn-success y ponle el texto Identificar imagen -->
+          <button onclick =  "take_snapshot();" class ="btn btn-success"> Identificar imagen</button>
+      <br><br>
+      <!-- pon un parrafo con estilo font-size: 22px; con el texto Objeto: y pon adentro del parrafo una etiqueta span con el id result_object_name cierra la etiqueta span y el parrafo -->
+      <p style = "font-size: 22px;" > Objeto <span id = "result_object_name"></span></p>
+         <!-- pon un parrafo con estilo font-size: 22px; con el texto Precisión: , pon adentro del parrafo una etiqueta span con el id result_object_accuracy cierra la etiqueta span y el parrafo -->
+         <p style = "font-size: 22px;" > Precisión <span id = "result_object_accuracy"></span></p>
+      
+    </center>
+
+  </div>
+<script src="main.js"></script> <!--enlace al archivo de java script -->
+  </body>
+</html>
+
+ 
